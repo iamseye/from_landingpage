@@ -1,5 +1,4 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=http%3A%2F%2Fwww.jotform.com%2Fform%2F70798122358463" title="oEmbed Form"><link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=http%3A%2F%2Fwww.jotform.com%2Fform%2F70798122358463" title="oEmbed Form">
 <meta property="og:title" content="Blank Form" >
@@ -7,7 +6,7 @@
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta name="HandheldFriendly" content="true" />
-<title>Blank Form</title>
+<title>Lalamove</title>
 <link href="https://cdn.jotfor.ms/static/formCss.css?3.3.17973" rel="stylesheet" type="text/css" />
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.17973" />
 <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.17973" />
@@ -171,7 +170,7 @@
   color: #f48752;
 }
 .form-sub-label {
-  color: #f48752;
+  color: #B4B4B4;
 }
 .form-label-top,
 .form-label-left,
@@ -199,12 +198,18 @@
   -ms-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
-  background-color: rgba(16, 16, 16, 0.15);
+  background : none !important;
+  background-color : transparent !important;
+}
+.form-line-active input:focus{
+  border:none !important;
+  border-bottom:2px solid #F16622 !important;
 }
 /* omer */
 .form-radio-item,
 .form-checkbox-item {
   padding-bottom: 3px !important;
+  float: none !important;
 }
 .form-radio-item:last-child,
 .form-checkbox-item:last-child {
@@ -305,7 +310,7 @@
   text-indent: 27px;
 }
 .form-checkbox-item:not(#foo) label:before {
-  content: '';
+  content: none!important;
   position: absolute;
   display: inline-block;
   vertical-align: baseline;
@@ -322,7 +327,7 @@
   cursor: pointer;
 }
 .form-checkbox-item:not(#foo) label:after {
-  content: '';
+  content: none!important;
   position: absolute;
   z-index: 10;
   display: inline-block;
@@ -482,6 +487,7 @@ h2 ~ .form-subHeader {
 .form-header-group {
   text-align: center;
 }
+
 /*.form-dropdown,
 .form-radio-item,
 .form-checkbox-item,
@@ -885,44 +891,53 @@ li[data-type="control_image"] img {
     border-bottom-color : #B4B4B4;
 }
 
+input:-webkit-autofill{
+  background-color: none !important;
+}
+
 .ck-button {
     margin:4px;
-    background-color:#EFEFEF;
-    border-radius:4px;
-    border:1px solid #D0D0D0;
+    background-color:#FFFFFF;
+    border-radius:25px;
+    border:2px solid #B4B4B4;
     overflow:auto;
     float:left;
 }
-.ck-button label {
-    float:left;
-    width:4.0em;
-}
+
 
 .ck-button label span {
     text-align:center;
-    padding:3px 0px;
+    padding:5px 10px;
     display:block;
     border-radius:4px;
+    margin-left: -23px;
 }
 
-.ck-button input {
+.ck-button label input {
     position:absolute;
     top:-20px;
 }
 
-.ck-button input:hover + span {
-    background-color:#efE0E0;
+.ck-button label:hover{
+    background-color:rgba(241,102,34, 0.1);
+    color:#F16622;
+    border-color:#F16622;
 }
 
-.ck-button input:checked + span {
-    background-color:#911;
-    color:#fff;
+.clicked{
+  border-color: #F16622;
+  color:#F16622;
 }
 
-.ck-button input:checked:hover + span {
-    background-color:#c11;
-    color:#fff;
+.clicked span{
+  border-color: #F16622;
+  color:#F16622;
 }
+
+.ck-button :checked+label{
+    background-color: rgba(241,102,34, 0.1);
+}
+
 
     /* Injected CSS Code */
 </style>
@@ -931,33 +946,30 @@ li[data-type="control_image"] img {
 <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.17973" type="text/javascript"></script>
 <script type="text/javascript">
    JotForm.init(function(){
-      setTimeout(function() {
-          $('input_3').hint('Company Name');
-       }, 20);
-      setTimeout(function() {
-          $('input_5').hint('Name');
-       }, 20);
-      setTimeout(function() {
-          $('input_16').hint('Email');
-       }, 20);
+      
       JotForm.alterTexts({"alphabetic":"This field can only contain letters","alphanumeric":"This field can only contain letters and numbers.","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidNumber":"Credit Card Number is invalid.","ccMissingDetails":"Please fill up the Credit Card details.","ccMissingDonation":"Please enter numeric values for donation amount.","ccMissingProduct":"Please select at least one product.","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","confirmClearForm":"Are you sure you want to clear the form?","confirmEmail":"E-mail does not match","currency":"This field can only contain currency values.","cyrillic":"This field can only contain cyrillic characters","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","dateLimited":"This date is unavailable.","disallowDecimals":"Please enter a whole number.","email":"Enter a valid e-mail address","fillMask":"Field value must fill mask.","freeEmailError":"Free email accounts are not allowed","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","gradingScoreError":"Score total should only be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","lessThan":"Your score should be less than or equal to","maxDigitsError":"The maximum digits allowed is","maxSelectionsError":"The maximum number of selections allowed is","minSelectionsError":"The minimum required number of selections is","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","numeric":"This field can only contain numeric values","pastDatesDisallowed":"Date must not be in the past.","pleaseWait":"Please wait...","required":"This field is required.","requireEveryCell":"Every cell is required.","requireEveryRow":"Every row is required.","requireOne":"At least one field required.","submissionLimit":"Sorry! Only one entry is allowed.  Multiple submissions are disabled for this form.","uploadExtensions":"You can only upload following files:","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","url":"This field can only contain a valid URL","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is"});
 	JotForm.clearFieldOnHide="disable";
    });
 </script>
 </head>
 <body>
+
+<header id="header" style="height:55px; border-bottom:1px solid #f16622; padding-top:20px; padding-left: 37px;"> 
+    <a target="_blank" href="https://www.lalamove.com/"><img src="http://ldev-pro.lalamove.com:20060/assets/img/header/lalamove-logo.png"/></a>
+</header>
+
+<div class="supernova">
 <form class="jotform-form" action="https://submit.jotform.me/submit/70798122358463/" method="post" name="form_70798122358463" id="70798122358463" accept-charset="utf-8">
   <input type="hidden" name="formID" value="70798122358463" />
   <div class="form-all">
-    <img src="http://ldev-pro.lalamove.com:20060/assets/img/header/lalamove-logo.png"/>
     <ul class="form-section page-section">
       <li class="form-line jf-required" data-type="control_textbox" id="id_3">
         <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3">
           COMPANY INFO
-          
         </label>
         <div id="cid_3" class="form-input jf-required">
-          <input type="text" id="input_3" name="q3_companyInfo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder="Company Name" data-component="textbox" />
+          <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Company Name </label>
+          <input type="text" id="input_3" name="q3_companyInfo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_dropdown" id="id_4">
@@ -965,8 +977,9 @@ li[data-type="control_image"] img {
           
         </label>
         <div id="cid_4" class="form-input jf-required">
+        <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Industry</label>
           <select class="form-dropdown validate[required]" id="input_4" name="q4_input4" style="width:150px;" data-component="dropdown">
-            <option value=""> Industry </option>
+            <option value=""> Select </option>
             <option value="Option 1"> Option 1 </option>
             <option value="Option 2"> Option 2 </option>
             <option value="Option 3"> Option 3 </option>
@@ -982,8 +995,9 @@ li[data-type="control_image"] img {
           
         </label>
         <div id="cid_7" class="form-input jf-required">
+        <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Company Size</label>
           <select class="form-dropdown validate[required]" id="input_7" name="q7_input7" style="width:150px;" data-component="dropdown">
-            <option value=""> Company Size </option>
+            <option value=""> Select</option>
             <option value="Option 1"> Option 1 </option>
             <option value="Option 2"> Option 2 </option>
             <option value="Option 3"> Option 3 </option>
@@ -998,7 +1012,9 @@ li[data-type="control_image"] img {
           
         </label>
         <div id="cid_5" class="form-input jf-required">
-          <input type="text" id="input_5" name="q5_contactPerson" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder="Name" data-component="textbox" />
+        <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Name</label>
+
+          <input type="text" id="input_5" name="q5_contactPerson" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_phone" id="id_15">
@@ -1007,23 +1023,17 @@ li[data-type="control_image"] img {
         </label>
         <div id="cid_15" class="form-input jf-required">
           <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top;">
+            <span class="form-sub-label-container" style="vertical-align:top;">            
+            <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Country Code </label>
               <input type="tel" id="input_15_country" name="q15_input15[country]" class="form-textbox validate[required]" size="6" value="" data-component="countryCode" />
               <span class="phone-separate">
                  -
               </span>
-              <label class="form-sub-label" for="input_15_country" id="sublabel_country" style="min-height:13px;"> Country Code </label>
             </span>
+          
             <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="tel" id="input_15_area" name="q15_input15[area]" class="form-textbox validate[required]" size="3" value="" data-component="areaCode" />
-              <span class="phone-separate">
-                 -
-              </span>
-              <label class="form-sub-label" for="input_15_area" id="sublabel_area" style="min-height:13px;"> Area Code </label>
-            </span>
-            <span class="form-sub-label-container" style="vertical-align:top;">
-              <input type="tel" id="input_15_phone" name="q15_input15[phone]" class="form-textbox validate[required]" size="8" value="" data-component="phone" />
               <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Phone Number </label>
+              <input type="tel" id="input_15_phone" name="q15_input15[phone]" class="form-textbox validate[required]" size="27" value="" data-component="phone" />
             </span>
           </div>
         </div>
@@ -1032,7 +1042,9 @@ li[data-type="control_image"] img {
         <label class="form-label form-label-left form-label-auto" id="label_16" for="input_16">
         </label>
         <div id="cid_16" class="form-input jf-required">
-          <input type="email" id="input_16" name="q16_email" class="form-textbox validate[required, Email]" size="30" value="" placeholder="Email" data-component="email" />
+        <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Email</label>
+
+          <input type="email" id="input_16" name="q16_email" class="form-textbox validate[required, Email]" size="30" value=""  data-component="email" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_dropdown" id="id_14">
@@ -1040,8 +1052,10 @@ li[data-type="control_image"] img {
           NUMBERS
         </label>
         <div id="cid_14" class="form-input jf-required">
+                <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Predicted Order by week</label>
+
           <select class="form-dropdown validate[required]" id="input_14" name="q14_numbers" style="width:150px;" data-component="dropdown">
-            <option value=""> Predicted Order by week </option>
+            <option value=""> Select </option>
             <option value="Option 1"> Option 1 </option>
             <option value="Option 2"> Option 2 </option>
             <option value="Option 3"> Option 3 </option>
@@ -1058,28 +1072,31 @@ li[data-type="control_image"] img {
         <div id="cid_17" class="form-input jf-required">
           <div class="form-multiple-column" data-columncount="2" data-component="checkbox">
             <span class="form-checkbox-item">
-              <span class="dragger-item">
-              </span>
-                <input type="checkbox" class="form-checkbox" id="input_17_0" name="q17_programmingPreferred[]" value="PHP" />
-                <label id="label_input_17_0" for="input_17_0"> <span>PHP</span> </label>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+                  <input type="checkbox" class="form-checkbox" id="input_17_0" name="q17_programmingPreferred[]" value="PHP" />
+                  <label id="label_input_17_0" for="input_17_0"><span>PHP</span> </label>
+              </div>
             </span>
             <span class="form-checkbox-item">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox" id="input_17_1" name="q17_programmingPreferred[]" value="RUBY" />
-              <label id="label_input_17_1" for="input_17_1"> RUBY </label>
+              <label id="label_input_17_1" for="input_17_1"> <span>RUBY</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox" id="input_17_2" name="q17_programmingPreferred[]" value="javaScript" />
-              <label id="label_input_17_2" for="input_17_2"> javaScript </label>
+              <label id="label_input_17_2" for="input_17_2"> <span>javaScript</span> </label></div>
             </span>
             <span class="form-checkbox-item">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox" id="input_17_3" name="q17_programmingPreferred[]" value="Python" />
-              <label id="label_input_17_3" for="input_17_3"> Python </label>
+              <label id="label_input_17_3" for="input_17_3"> <span>Python</span> </label></div>
             </span>
           </div>
         </div>
@@ -1094,38 +1111,44 @@ li[data-type="control_image"] img {
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox validate[required]" id="input_12_0" name="q12_potentialOpening[]" value="city 1" />
-              <label id="label_input_12_0" for="input_12_0"> city 1 </label>
+              <label id="label_input_12_0" for="input_12_0"> <span>city 1</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox validate[required]" id="input_12_1" name="q12_potentialOpening[]" value="city 2" />
-              <label id="label_input_12_1" for="input_12_1"> city 2 </label>
+              <label id="label_input_12_1" for="input_12_1"> <span>city 2</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox validate[required]" id="input_12_2" name="q12_potentialOpening[]" value="city 3" />
-              <label id="label_input_12_2" for="input_12_2"> city 3 </label>
+              <label id="label_input_12_2" for="input_12_2"> <span>city 3</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox validate[required]" id="input_12_3" name="q12_potentialOpening[]" value="city 4" />
-              <label id="label_input_12_3" for="input_12_3"> city 4 </label>
+              <label id="label_input_12_3" for="input_12_3"> <span>city 4 </span></label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox validate[required]" id="input_12_4" name="q12_potentialOpening[]" value="city 5" />
-              <label id="label_input_12_4" for="input_12_4"> city 5 </label>
+              <label id="label_input_12_4" for="input_12_4"> <span>city 5 </span></label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
               <input type="checkbox" class="form-checkbox validate[required]" id="input_12_5" name="q12_potentialOpening[]" value="city 6" />
-              <label id="label_input_12_5" for="input_12_5"> city 6 </label>
+              <label id="label_input_12_5" for="input_12_5"> <span>city 6</span> </label></div>
             </span>
           </div>
         </div>
@@ -1149,6 +1172,16 @@ li[data-type="control_image"] img {
   <script type="text/javascript">
   document.getElementById("si" + "mple" + "_spc").value = "70798122358463-70798122358463";
   </script>
-</form></body>
+ <script type="text/javascript">
+   
+   function ckBtnColor(x)
+   {
+    console.log(x.className);
+      x.className += " clicked";
+   }
+  
+ </script>
+</form>
+</div></body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
