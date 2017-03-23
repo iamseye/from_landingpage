@@ -24,9 +24,7 @@ in 1 click.">
     font-family: "notosans-regular";
     src: url("notosans-regular.ttf");
 }
-    .form-label-left{
-        width:150px !important;
-    }
+    
     .form-line{
         padding-top:12px;
         padding-bottom:12px;
@@ -216,6 +214,11 @@ in 1 click.">
   background-color : transparent !important;
 }
 .form-line-active input:focus{
+  border:none !important;
+  border-bottom:2px solid #F16622 !important;
+}
+
+.form-line-active select:focus{
   border:none !important;
   border-bottom:2px solid #F16622 !important;
 }
@@ -530,11 +533,11 @@ h2 ~ .form-subHeader {
 }
 .form-textbox,
 .form-textarea {
-  font-size: 17px;
+  font-size: 14px;
   border-width: 2px;
   border-style: solid;
   border-color: #ffffff;
-  color: #b4b4b4;
+  color: #000000;
   padding: 4px 3px 2px 3px;
 }
 .form-textbox,
@@ -1065,7 +1068,7 @@ input:-webkit-autofill{
       </li>
       <li class="form-line jf-required" data-type="control_dropdown" id="id_14">
         <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14">
-        PREDICTED ORDER BY WEEK
+        PREDICTED ORDER <br>BY WEEK
         </label>
         <div id="cid_14" class="form-input jf-required">
                 
@@ -1124,7 +1127,7 @@ input:-webkit-autofill{
       </li>
       <li class="form-line jf-required" data-type="control_checkbox" id="id_12">
         <label class="form-label form-label-left form-label-auto" id="label_12" for="input_12">
-          POTENTIAL OPENING
+          POTENTIAL <br>OPENING
           
         </label>
         <div id="cid_12" class="form-input jf-required">
