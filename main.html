@@ -14,7 +14,16 @@ in 1 click.">
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.17973" />
 <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.17973" />
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/54ab0a7825d790e9458b4567.css?themeRevisionID=57debafa9a11c7fbbd8b4567"/>
+
 <style type="text/css">
+@font-face {
+    font-family: "notosans-bold";
+    src: url("NotoSans-Bold.ttf");
+}
+@font-face {
+    font-family: "notosans-regular";
+    src: url("notosans-regular.ttf");
+}
     .form-label-left{
         width:150px !important;
     }
@@ -36,7 +45,7 @@ in 1 click.">
         padding-top:20px;
         width:550px;
         color:#F16622 !important;
-        font-family:'Trebuchet MS';
+        font-family:'notosans-regular','Trebuchet MS';
         font-size:14px;
     }
 </style>
@@ -44,7 +53,7 @@ in 1 click.">
 <style type="text/css" id="form-designer-style">
     /* Injected CSS Code */
 .form-all {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "notosans-regular","Trebuchet MS", sans-serif;
 }
 .form-all {
   width: 550px;
@@ -430,7 +439,7 @@ in 1 click.">
   -moz-appearance: button;
   appearance: none;
   margin: 0;
-  font-size: 17px;
+  font-size: 14px;
 }
 .form-all {
   -webkit-border-radius: 0px;
@@ -561,7 +570,7 @@ h2 ~ .form-subHeader {
   text-align: center !important;
 }
 .form-label {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "notosans-bold","Trebuchet MS", sans-serif;
 }
 li[data-type="control_image"] div {
   text-align: left;
@@ -895,7 +904,11 @@ li[data-type="control_image"] img {
 }
 
 .form-dropdown {
-    border-bottom-color : #B4B4B4;
+    border:none;
+    border-bottom: 2px solid #B4B4B4;
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 0px;
+    background: url(arrow.png) no-repeat right ;
 }
 
 input:-webkit-autofill{
@@ -913,7 +926,7 @@ input:-webkit-autofill{
 
 
 .ck-button label span {
-    font-size: 17px;
+    font-size: 14px;
     text-align:center;
     padding:5px 10px;
     display:block;
@@ -1036,7 +1049,7 @@ input:-webkit-autofill{
           
             <span class="form-sub-label-container" style="vertical-align:top;">
               <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Phone Number </label>
-              <input type="tel" id="input_15_phone" name="q15_input15[phone]" class="form-textbox validate[required]" size="20" value="" data-component="phone" />
+              <input type="tel" id="input_15_phone" name="q15_input15[phone]" class="form-textbox validate[required]" size="19" value="" data-component="phone" />
             </span>
           </div>
         </div>
