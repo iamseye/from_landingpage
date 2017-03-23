@@ -56,6 +56,7 @@
   white-space: normal;
 }
 .form-label.form-label-auto {
+  font-size: 14px;
   display: inline-block;
   float: left;
   text-align: left;
@@ -171,6 +172,7 @@
 }
 .form-sub-label {
   color: #B4B4B4;
+  font-size: 12px;
 }
 .form-label-top,
 .form-label-left,
@@ -425,6 +427,7 @@
   -moz-appearance: button;
   appearance: none;
   margin: 0;
+  font-size: 17px;
 }
 .form-all {
   -webkit-border-radius: 0px;
@@ -515,6 +518,7 @@ h2 ~ .form-subHeader {
 }
 .form-textbox,
 .form-textarea {
+  font-size: 17px;
   border-width: 2px;
   border-style: solid;
   border-color: #ffffff;
@@ -899,13 +903,14 @@ input:-webkit-autofill{
     margin:4px;
     background-color:#FFFFFF;
     border-radius:25px;
-    border:2px solid #B4B4B4;
+    border:1px solid #B4B4B4;
     overflow:auto;
     float:left;
 }
 
 
 .ck-button label span {
+    font-size: 17px;
     text-align:center;
     padding:5px 10px;
     display:block;
@@ -918,11 +923,6 @@ input:-webkit-autofill{
     top:-20px;
 }
 
-.ck-button label:hover{
-    background-color:rgba(241,102,34, 0.1);
-    color:#F16622;
-    border-color:#F16622;
-}
 
 .clicked{
   border-color: #F16622;
@@ -980,13 +980,14 @@ input:-webkit-autofill{
         <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Industry</label>
           <select class="form-dropdown validate[required]" id="input_4" name="q4_input4" style="width:150px;" data-component="dropdown">
             <option value=""> Select </option>
-            <option value="Option 1"> Option 1 </option>
-            <option value="Option 2"> Option 2 </option>
-            <option value="Option 3"> Option 3 </option>
-            <option value="Option 4"> Option 4 </option>
-            <option value="Option 5"> Option 5 </option>
-            <option value="Option 6"> Option 6 </option>
-            <option value="Option 7"> Option 7 </option>
+            <option value="Option 1"> Apparel</option>
+            <option value="Option 2"> Construction </option>
+            <option value="Option 3"> Electronics </option>
+            <option value="Option 4"> Food and Beverage </option>
+            <option value="Option 5"> Logistics </option>
+            <option value="Option 6"> Online Marketplace </option>
+            <option value="Option 7"> Professional Services </option>
+            <option value="Option 7"> Others </option>
           </select>
         </div>
       </li>
@@ -997,12 +998,11 @@ input:-webkit-autofill{
         <div id="cid_7" class="form-input jf-required">
         <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Company Size</label>
           <select class="form-dropdown validate[required]" id="input_7" name="q7_input7" style="width:150px;" data-component="dropdown">
-            <option value=""> Select</option>
-            <option value="Option 1"> Option 1 </option>
-            <option value="Option 2"> Option 2 </option>
-            <option value="Option 3"> Option 3 </option>
-            <option value="Option 4"> Option 4 </option>
-            <option value="Option 5"> Option 5 </option>
+            <option value=""> Select </option>
+            <option value="20"> 1 - 20 </option>
+            <option value="100"> 21 -100 </option>
+            <option value="500"> 101 - 500</option>
+            <option value="700"> 501 + </option>
           </select>
         </div>
       </li>
@@ -1033,7 +1033,7 @@ input:-webkit-autofill{
           
             <span class="form-sub-label-container" style="vertical-align:top;">
               <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Phone Number </label>
-              <input type="tel" id="input_15_phone" name="q15_input15[phone]" class="form-textbox validate[required]" size="27" value="" data-component="phone" />
+              <input type="tel" id="input_15_phone" name="q15_input15[phone]" class="form-textbox validate[required]" size="20" value="" data-component="phone" />
             </span>
           </div>
         </div>
@@ -1049,19 +1049,17 @@ input:-webkit-autofill{
       </li>
       <li class="form-line jf-required" data-type="control_dropdown" id="id_14">
         <label class="form-label form-label-left form-label-auto" id="label_14" for="input_14">
-          NUMBERS
+        PREDICTED ORDER BY WEEK
         </label>
         <div id="cid_14" class="form-input jf-required">
-                <label class="form-sub-label" for="input_15_phone" id="sublabel_phone" style="min-height:13px;"> Predicted Order by week</label>
+                
 
           <select class="form-dropdown validate[required]" id="input_14" name="q14_numbers" style="width:150px;" data-component="dropdown">
             <option value=""> Select </option>
-            <option value="Option 1"> Option 1 </option>
-            <option value="Option 2"> Option 2 </option>
-            <option value="Option 3"> Option 3 </option>
-            <option value="Option 4"> Option 4 </option>
-            <option value="Option 5"> Option 5 </option>
-            <option value="Option 6"> Option 6 </option>
+            <option value="20"> 1 - 20 </option>
+            <option value="100"> 21 -100 </option>
+            <option value="500"> 101 - 500</option>
+            <option value="700"> 501 + </option>
           </select>
         </div>
       </li>
@@ -1098,6 +1096,13 @@ input:-webkit-autofill{
               <input type="checkbox" class="form-checkbox" id="input_17_3" name="q17_programmingPreferred[]" value="Python" />
               <label id="label_input_17_3" for="input_17_3"> <span>Python</span> </label></div>
             </span>
+            <span class="form-checkbox-item">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox" id="input_17_4" name="q17_programmingPreferred[]" value="Others" />
+              <label id="label_input_17_4" for="input_17_4"> <span>Others</span> </label></div>
+            </span>
           </div>
         </div>
       </li>
@@ -1112,43 +1117,95 @@ input:-webkit-autofill{
               <span class="dragger-item">
               </span>
               <div class="ck-button" onchange="ckBtnColor(this)">
-              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_0" name="q12_potentialOpening[]" value="city 1" />
-              <label id="label_input_12_0" for="input_12_0"> <span>city 1</span> </label></div>
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_0" name="q12_potentialOpening[]" value="sg" />
+              <label id="label_input_12_0" for="input_12_0"> <span>Singapore</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <div class="ck-button" onchange="ckBtnColor(this)">
-              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_1" name="q12_potentialOpening[]" value="city 2" />
-              <label id="label_input_12_1" for="input_12_1"> <span>city 2</span> </label></div>
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_1" name="q12_potentialOpening[]" value="hk" />
+              <label id="label_input_12_1" for="input_12_1"> <span>Hong Kong</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <div class="ck-button" onchange="ckBtnColor(this)">
-              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_2" name="q12_potentialOpening[]" value="city 3" />
-              <label id="label_input_12_2" for="input_12_2"> <span>city 3</span> </label></div>
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_2" name="q12_potentialOpening[]" value="taipei" />
+              <label id="label_input_12_2" for="input_12_2"> <span>Taipei</span> </label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <div class="ck-button" onchange="ckBtnColor(this)">
-              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_3" name="q12_potentialOpening[]" value="city 4" />
-              <label id="label_input_12_3" for="input_12_3"> <span>city 4 </span></label></div>
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_3" name="q12_potentialOpening[]" value="manila" />
+              <label id="label_input_12_3" for="input_12_3"> <span>Manila</span></label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <div class="ck-button" onchange="ckBtnColor(this)">
-              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_4" name="q12_potentialOpening[]" value="city 5" />
-              <label id="label_input_12_4" for="input_12_4"> <span>city 5 </span></label></div>
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_4" name="q12_potentialOpening[]" value="bangkok" />
+              <label id="label_input_12_4" for="input_12_4"> <span>Bangkok</span></label></div>
             </span>
             <span class="form-checkbox-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <div class="ck-button" onchange="ckBtnColor(this)">
-              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_5" name="q12_potentialOpening[]" value="city 6" />
-              <label id="label_input_12_5" for="input_12_5"> <span>city 6</span> </label></div>
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_5" name="q12_potentialOpening[]" value="kualalumpur" />
+              <label id="label_input_12_5" for="input_12_5"> <span>Kuala Lumpur</span> </label></div>
+            </span>
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_6" name="q12_potentialOpening[]" value="HoChiMinh" />
+              <label id="label_input_12_6" for="input_12_6"> <span>Ho Chi Minh</span> </label></div>
+            </span>
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_7" name="q12_potentialOpening[]" value="Hanoi" />
+              <label id="label_input_12_7" for="input_12_7"> <span>Hanoi</span> </label></div>
+            </span>
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_8" name="q12_potentialOpening[]" value="Jakarta" />
+              <label id="label_input_12_8" for="input_12_8"> <span>Jakarta</span> </label></div>
+            </span>
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_9" name="q12_potentialOpening[]" value="Chiang Mai" />
+              <label id="label_input_12_9" for="input_12_9"> <span>Chiang Mai</span> </label></div>
+            </span>
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_10" name="q12_potentialOpening[]" value="Taichung" />
+              <label id="label_input_12_10" for="input_12_10"> <span>Taichung</span> </label></div>
+            </span>
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_11" name="q12_potentialOpening[]" value="Sydney" />
+              <label id="label_input_12_11" for="input_12_11"> <span>Sydney</span> </label></div>
+            </span>
+
+
+
+            <span class="form-checkbox-item" style="clear:left;">
+              <span class="dragger-item">
+              </span>
+              <div class="ck-button" onchange="ckBtnColor(this)">
+              <input type="checkbox" class="form-checkbox validate[required]" id="input_12_12" name="q12_potentialOpening[]" value="others" />
+              <label id="label_input_12_12" for="input_12_12"> <span>Others</span></label></div>
             </span>
           </div>
         </div>
@@ -1176,9 +1233,20 @@ input:-webkit-autofill{
    
    function ckBtnColor(x)
    {
-    console.log(x.className);
-      x.className += " clicked";
+       if(hasClass(x,'clicked'))
+       {
+         x.className="ck-button";
+       }
+       else
+       {
+        x.className += " clicked";
+       }
    }
+
+   function hasClass(element, className) {
+    return element.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(element.className);
+}
+
   
  </script>
 </form>
