@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Bootstrap & Google maps Tutorial by Bootstrapious.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        
+        <div class="container-fullwidth">
+
+        <nav class="navbar navbar-light bg-faded navbar-static-top">
+              <a class="navbar-brand" href="#">
+                <img src="http://ldev-pro.lalamove.com:20060/assets/img/header/lalamove-logo.png" class="img-responsive alt="">
+              </a>
+              <button id="lang_btn" type="button" class="btn btn-round pull-right">中文？</button>
+        </nav>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-3">
+                    Driver
+                </div>
+                <div class="col-md-3">
+                    Shipper
+                </div>
+                <div class="col-md-6">
+                     <button id="webapp_btn" type="button" class="btn pull-right">Try Lalamove Web App</button>
+                </div>
+            </div>
+
+        </div> 
+
+
+        <div id="map"></div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script src="custom.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIhfLBzAax5v8HG4LGK7UkGq4UoPeg4HA&callback=initMap"
+    async defer></script>
+    </body>
+</html>
